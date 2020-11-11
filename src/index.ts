@@ -1,3 +1,5 @@
+import { months } from './utils/arrays';
+
 export function dateToVerbal(enDate: string | Date): string {
     if (typeof enDate === 'string') enDate = new Date(enDate);
     return getHebrewVerbalDate(enDate);
@@ -25,6 +27,5 @@ export function heToEn(heDate: string): string {
 }
 
 function getHebrewVerbalDate(date: Date) {
-    const months = ['ינואר', 'פברואר', 'מרץ', 'אפריל', 'מאי', 'יוני', 'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר']
     return date.getDate() + ' ב' + `${months[date.getMonth()]} ${date.getFullYear()}`
 }
