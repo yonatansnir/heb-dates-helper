@@ -1,13 +1,11 @@
 export function dateToVerbal(enDate: string | Date): string {
-    const months = ['ינואר', 'פברואר', 'מרץ', 'אפריל', 'מאי', 'יוני', 'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר']
     if (typeof enDate === 'string') enDate = new Date(enDate);
-    return enDate.getDate() + ' ל' + `${months[enDate.getMonth()]} ${enDate.getFullYear()}`
+    return getHebrewVerbalDate(enDate);
 }
 
 export function heDateToVerbal(heDateString: string): string {
-    const months = ['ינואר', 'פברואר', 'מרץ', 'אפריל', 'מאי', 'יוני', 'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר']
     const date = heToDate(heDateString);
-    return date.getDate() + ' ל' + `${months[date.getMonth()]} ${date.getFullYear()}`
+    return getHebrewVerbalDate(date)
 }
 
 export function dateToNumeric(enDate: string | Date): string {
@@ -24,4 +22,9 @@ export function heToDate(heDate: string): Date {
 export function heToEn(heDate: string): string {
     let dateArr: string[] | number[] = heDate.split('/');
     return `${dateArr[1]}/${dateArr[0]}/${dateArr[2]}`
+}
+
+function getHebrewVerbalDate(date: Date) {
+    const months = ['ינואר', 'פברואר', 'מרץ', 'אפריל', 'מאי', 'יוני', 'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר']
+    return date.getDate() + ' ב' + `${months[date.getMonth()]} ${date.getFullYear()}`
 }
