@@ -4,6 +4,12 @@ export function dateToVerbal(enDate: string | Date): string {
     return enDate.getDate() + ' ל' + `${months[enDate.getMonth()]} ${enDate.getFullYear()}`
 }
 
+export function heDateToVerbal(heDateString: string): string {
+    const months = ['ינואר', 'פברואר', 'מרץ', 'אפריל', 'מאי', 'יוני', 'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר']
+    const date = heToDate(heDateString);
+    return date.getDate() + ' ל' + `${months[date.getMonth()]} ${date.getFullYear()}`
+}
+
 export function dateToNumeric(enDate: string | Date): string {
     if (typeof enDate === 'string') enDate = new Date(enDate);
     return `${enDate.getDate()}/${enDate.getMonth() + 1}/${enDate.getFullYear()}`
