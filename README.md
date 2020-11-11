@@ -27,9 +27,9 @@ Then simply use the function:
 ```
 dateToNumeric('12/20/2020') // '20/12/2020'
 dateToVerbal('12/20/2020') //  תוצאה: 20 לדצמבר 2020
+heDateToVerbal('20/12'2020') //  תוצאה: 20 לדצמבר 2020
 heToDate('20/12/2020') // Sun Dec 20 2020 00:00:00 GMT+0200 ... (Date obj)
 heToEn('20/12'2020') // '12/20/2020'
-
 
 // You can pass either a date or a string
 dateToNumeric(new Date('12/20/2020')) // '20/12/2020'
