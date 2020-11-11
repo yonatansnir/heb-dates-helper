@@ -1,0 +1,39 @@
+{
+  "name": "he-dates-helper",
+  "version": "0.0.1",
+  "description": "Functions that help display dates in Hebrew",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags",
+    "test": "jest --config jestconfig.json",
+    "serve": "tsc src/index.ts && node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaircohendev/en-he-date-translation.git"
+  },
+  "keywords": [
+    "English", "Date", "Hebrew"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaircohendev/en-he-date-translation/issues"
+  },
+  "homepage": "https://github.com/yaircohendev/en-he-date-translation#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.0.5"
+  },
+  "files": [
+    "lib/**/*",
+    "README.md"
+  ]
+}
