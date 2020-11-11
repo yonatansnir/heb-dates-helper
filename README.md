@@ -7,18 +7,18 @@ The purpose of this package is to allow you to write code that is shorter & more
 - [Usage](#usage)
 
 ## Installation
-```npm i he-date-translation```
+```npm i heb-dates-helper```
 
 ## Usage
 
 First, import the package or the function that you want to use:
 
 ```
-import * as heDatesHelper from 'he-dates-helper'; 
+import * as heDatesHelper from 'heb-dates-helper'; 
 
 // or
 
-import {dateToVerbal, dateToNumeric, ...} from 'he-dates-helper'
+import {dateToVerbal, dateToNumeric, ...} from 'heb-dates-helper'
 
 ```
 
